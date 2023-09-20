@@ -72,9 +72,9 @@ mem2[GPIO_OE:GPIO_OE+4] = struct.pack("<L", reg_status2)
 try:
   while(True):
       mem1[GPIO_SETDATAOUT:GPIO_SETDATAOUT+4] = struct.pack("<L", USR3)
-      #time.sleep(0.0000001)
+      time.sleep(0.0000001)
       mem1[GPIO_CLEARDATAOUT:GPIO_CLEARDATAOUT+4] = struct.pack("<L", USR3)
-      #time.sleep(0.0000001)
+      time.sleep(0.0000001)
 
 except KeyboardInterrupt:
   mem1.close()

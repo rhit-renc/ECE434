@@ -10,6 +10,7 @@
 4. shortest period is around 17ms
 
 | Sleep time | Period | Consistency | Processor Usage |
+| ---------- | ------ | ----------- | --------------- |
 | 0.1s | 218-230ms | Consistent | 1.9% |
 | 0.01s | 38.5ms | Consistent | 1.9% |
 | 0.05s | 118.5ms | Consistent | 3.8% |
@@ -33,6 +34,7 @@
 
 3. 
 | Script | Min Period | CPU Usage |
+| ------ | ---------- | --------- |
 | Shell | 17ms | 21% |
 | Python | 300us | 70% |
 

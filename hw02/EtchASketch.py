@@ -2,6 +2,7 @@
 # Clark Ren
 # Date: 4 Dec 2023
 # Usage: python EtchASketch.py [dimx] [dimy]
+import gpiod
 import sys
 
 # Parse argumnts
@@ -16,6 +17,20 @@ else:
 coord = [0, 0]
 penDown = True
 canvas = []
+
+CONSUMER='getset'
+CHIP='1'
+getoffsets=[14, 15, 12, 13] # P8_16, P8_15, P8_12, P8_11
+setoffests=[18, 16, 19, 17] # P9_14, P9_15, P9_16, P9_23
+debounce = [0, 0, 0, 0]
+
+chip = gpiod.Chip(CHIP)
+
+getlines = chip.get_lines(getoffsets)
+getlines.request(consumer=CONSUMER, type=gpiod.LINE_REQ_EV_BOTH_EDGES)
+
+setlines = chip.get_lines(setoffests)
+setlines.request(consumer=CONSUMER, type=gpiod.LINE_REQ_DIR_OUT)
 
 # Set up canvas
 for i in range(dimy):
@@ -81,8 +96,44 @@ def on_key_release(key):
 
 # loop
 while True:
-    keypress = input()
-    on_key_release(keypress)
+    # keypress = input()
+    # on_key_release(keypress)
+    ev_lines = getlines.event_wait(sec=1)
+    if ev_lines:
+        for line in ev_lines:
+            event = line.event_read()
+            # print_event(event)
+    vals = getlines.get_values()
+    
+    for val in vals:
+        print(val, end=' ')
+    print('\r', end='')
+
+    setlines.set_values(vals)
+    if(vals[0] == 1 and not debounce[0]):
+        movePen(1)
+        debounce[0] = 1
+    elif(vals[0] == 0):
+        debounce[0] = 0
+
+    if(vals[1] == 1 and not debounce[1]):
+        movePen(3)
+        debounce[1] = 1
+    elif(vals[1] == 0):
+        debounce[1] = 0
+
+    if(vals[2] == 1 and not debounce[2]):
+        movePen(4)
+        debounce[2] = 1
+    elif(vals[2] == 0):
+        debounce[2] = 0
+
+    if(vals[3] == 1 and not debounce[3]):
+        movePen(2)
+        debounce[3] = 0
+    elif(vals[3] == 0):
+        debounce[3] = 0
+
     printCanvas()
 
 

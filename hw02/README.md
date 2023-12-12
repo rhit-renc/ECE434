@@ -32,13 +32,26 @@
 
 2. 70% CPU usage
 
-3. 
+## C script questions
+
+1. 5kHz, 198us
+
+2. 57% CPU usage
+
+Table for question 3:
 | Script | Min Period | CPU Usage |
 | ------ | ---------- | --------- |
 | Shell | 17ms | 21% |
 | Python | 300us | 70% |
+| C | 198us | 57% |
 
-## C script questions
+## gpiod
+| Script | Min Period |
+| ------ | ---------- |
+| toggle1.py | 19us |
+| toggle1.c | 4us |
+| toggle2.py | 20us |
+| toggle2.c | 4.3us |
 
 # Etch-A-Sketch
 Usage: python EtchASketch.py [dimx] [dimy] dimx: number of horizontal characters used in the canvas dimy: number of vertical characters used in the canvas

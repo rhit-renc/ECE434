@@ -69,6 +69,7 @@ def movePen(direction): # using a function because it's too cluttered otherwise
     # print(coord[0], coord[1])
     if(penDown):
         canvas[coord[1]][coord[0]] = 'x'
+    printCanvas()
 
 # Performs a task based off of key input
 # Remenant code from previous experimentation. Can probably be merged with movePen
@@ -134,8 +135,7 @@ while True:
     elif(vals[3] == 0):
         debounce[3] = 0
 
-    printCanvas()
-
+    # printCanvas()
 
 # while(True):
 #     for evenement in pygame.event.get():

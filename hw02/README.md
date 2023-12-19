@@ -67,3 +67,15 @@ Button wirings: [P8_16, P8_15, P8_12, P8_11]
 Keyboard function has been removed to implement button control. Note that as a result, the functionality to clear the canvas and raise or lower the pen has also ben removed.
 
 To move the pen across the canvas, use the buttons. The pen should move as soon as the button is pressed and additional inputs for the same direction must be input after the release of the button.
+
+# hw02 grading
+
+| Points      | Description | Comment
+| ----------- | ----------- | -------
+|  2/2 | Buttons and LEDs 
+|  8/8 | Etch-a-Sketch works
+|  2/2 | Measuring a gpio pin on an Oscilloscope 
+|  2/2 | Questions answered
+|  4/4 | Table complete 
+|  2/2 | gpiod
+| 20/20   | **Total**

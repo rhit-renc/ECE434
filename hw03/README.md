@@ -25,3 +25,16 @@ Pen location starts at [0, 0] (top left corner)
 
 To move the pen across the canvas, rotate the rotary encoders
 Drawn pixels are not able to be overwritten unless the canvas is cleared first
+
+# hw03 grading
+
+| Points      | Description | |
+| ----------- | ----------- |-|
+|  6/8 | TMP101 | Didn't use /sys/class/i2c-adapter/i2c-2/new_device 
+|  2/2 |   | Documentation 
+|  5/5 | Etch-a-Sketch
+|  0/3 |   | setup.sh | Missing
+|  2/2 |   | Documentation
+| 15/20 | **Total**
+
+*My comments are in italics. --may*

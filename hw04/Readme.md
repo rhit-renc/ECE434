@@ -72,21 +72,21 @@ CS: P9_28
 GND: P9_2
 VCC: P9_4
 
-## Display image:
+### Display image:
 sudo fbi -noverbose -T 1 -a boris.png
 
-## Display image rotated 90 degrees:
+### Display image rotated 90 degrees:
 convert boris.png -rotate 90 boris90.png;sudo fbi -noverbose -T 1 -a  boris90.png
 Note: creates a new, rotated image and displays it
 
-## Play video:
+### Play video:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=320:240 yippee.gif
 
-## Play video rotated 90 degrees:
+### Play video rotated 90 degrees:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=240:320,rtate=1 yippee.gif
 
-## Repeat video indefinitely:
+### Repeat video indefinitely:
 mplayer -vo fbdev2 -nolirc -framedrop -loop 0 -vf scale=320:240 yippee.gif
 
-## Display Text:
+### Display Text:
 Script to display text is at hw04/text.sh

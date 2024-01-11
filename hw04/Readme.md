@@ -137,8 +137,12 @@ Note: creates a new, rotated image and displays it
 ### Play video:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=320:240 ./media/yippee.gif
 
+<video src="./images/yippee.mp4" width="320" height="240" controls></video>
+
 ### Play video rotated 90 degrees:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=240:320,rotate=1 ./media/yippee.gif
+
+<video src="./images/yippeerot.mp4" width="320" height="240" controls></video>
 
 ### Repeat video indefinitely:
 mplayer -vo fbdev2 -nolirc -framedrop -loop 0 -vf scale=320:240 ./media/yippee.gif

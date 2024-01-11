@@ -137,8 +137,12 @@ Note: creates a new, rotated image and displays it
 ### Play video:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=320:240 ./media/yippee.gif
 
+https://github.com/rhit-renc/ECE434/assets/92644174/d4980984-1c1d-410a-8ff4-01bf772e512b
+
 ### Play video rotated 90 degrees:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=240:320,rotate=1 ./media/yippee.gif
+
+https://github.com/rhit-renc/ECE434/assets/92644174/fdf9eceb-96a9-4e37-91f5-cd36ef66fe88
 
 ### Repeat video indefinitely:
 mplayer -vo fbdev2 -nolirc -framedrop -loop 0 -vf scale=320:240 ./media/yippee.gif
@@ -147,3 +151,4 @@ mplayer -vo fbdev2 -nolirc -framedrop -loop 0 -vf scale=320:240 ./media/yippee.g
 Script to display text is at hw04/text.sh
 
 ![image](./images/boristext.jpg)
+

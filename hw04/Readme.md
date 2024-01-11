@@ -125,10 +125,14 @@ VCC: P9_4
 ### Display image:
 sudo fbi -noverbose -T 1 -a ./media/boris.png
 
+![image](./images/boris.jpg)
+
 ### Display image rotated 90 degrees:
 convert ./media/boris.png -rotate 90 ./media/boris90.png;sudo fbi -noverbose -T 1 -a  ./media/boris90.png
 
 Note: creates a new, rotated image and displays it
+
+![image](./images/borisrot.jpg)
 
 ### Play video:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=320:240 ./media/yippee.gif
@@ -141,3 +145,5 @@ mplayer -vo fbdev2 -nolirc -framedrop -loop 0 -vf scale=320:240 ./media/yippee.g
 
 ### Display Text:
 Script to display text is at hw04/text.sh
+
+![image](./images/boristext.jpg)

@@ -1,4 +1,4 @@
-##Memory Map
+# Memory Map
 Note: Description of blocks are placed between starting and ending addresses
 
 FFFF_FFFF
@@ -27,7 +27,7 @@ GPIO0
 512MB External Memory
 0000_0000
 
-##GPIO via mmap
+# GPIO via mmap
 Wiring guide:
 LED 1: P8_24
 LED 2: P98_18
@@ -42,7 +42,7 @@ GPIO toggling stats:
 no usleep: 7.35us
 with usleep: 100us
 
-##i2c via the Kernel Driver
+# i2c via the Kernel Driver
 Wiring guide:
 SCL: P9_19
 SDA: P9_20
@@ -50,7 +50,7 @@ SDA: P9_20
 Script to check temperature is at hw04/tmp.sh
 Note: This script checks the address of the TMP101 sensor at address 0x48, which has its address pin tied to ground
 
-## Control the LED matrix from a browser - Flask
+#  Control the LED matrix from a browser - Flask
 Usage: EtchASketch.py
 Wiring guide:
 SCL: P9_19
@@ -58,7 +58,7 @@ SDA: P9_20
 LED matrix can be manipulated from the host machine through 192.168.7.2:8081
 To execute action, click respective button on the webpage
 
-##TFT LCD Display
+# TFT LCD Display
 Note: media files contained in hw04/media
 
 LCD Display is connected to SPI1. Wiring is as follows:
@@ -72,21 +72,21 @@ CS: P9_28
 GND: P9_2
 VCC: P9_4
 
-####Display image:
+## Display image:
 sudo fbi -noverbose -T 1 -a boris.png
 
-####Display image rotated 90 degrees:
+## Display image rotated 90 degrees:
 convert boris.png -rotate 90 boris90.png;sudo fbi -noverbose -T 1 -a  boris90.png
 Note: creates a new, rotated image and displays it
 
-####Play video:
+## Play video:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=320:240 yippee.gif
 
-####Play video rotated 90 degrees:
+## Play video rotated 90 degrees:
 mplayer -vo fbdev2 -nolirc -framedrop -vf scale=240:320,rtate=1 yippee.gif
 
-####Repeat video indefinitely:
+## Repeat video indefinitely:
 mplayer -vo fbdev2 -nolirc -framedrop -loop 0 -vf scale=320:240 yippee.gif
 
-####Display Text:
+## Display Text:
 Script to display text is at hw04/text.sh

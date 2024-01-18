@@ -1,0 +1,1 @@
+cmd_/home/debian/exploringBB/extras/kernel/ebbchar/ebbchar.ko := ld -r -EL -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T scripts/module.lds -o /home/debian/exploringBB/extras/kernel/ebbchar/ebbchar.ko /home/debian/exploringBB/extras/kernel/ebbchar/ebbchar.o /home/debian/exploringBB/extras/kernel/ebbchar/ebbchar.mod.o;  true

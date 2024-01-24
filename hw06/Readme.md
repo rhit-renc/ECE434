@@ -29,3 +29,19 @@ no load no RT data is stored in nort_noload.hist
 run the following command to generate the histogram: gnuplot hist_load.plt
 
 run the following command to display the image: xdg-open cyclictest.png
+
+# hw06 grading
+
+| Points      | Description | |
+| ----------- | ----------- |-|
+|  2/2 | Project 
+|  5/5 | Questions
+|  4/4 | PREEMPT_RT
+|  2/2 | Plots to 500 us
+|  5/5 | Plots - Heavy/Light load
+|  2/2 | Extras
+| 20/20 | **Total**
+
+*My comments are in italics. --may*
+
+ | *Mainline is the main kernel tree.*

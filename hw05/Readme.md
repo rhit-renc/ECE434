@@ -63,3 +63,18 @@ Usage:
 2. To view the kernel log, run the command: dmesg --follow
 3. From hw05/led, run the command: sudo insmod led.ko
 4. When satisfied from pressing buttons, run the command: sudo rmmod led.ko
+
+# hw05 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  0/0 | Project 
+|  2/2 | Makefile
+|  6/6 | Kernel Source
+|  6/6 | Kernel Modules: hello, ebbchar, gpio_test, led
+|  4/4 | Etch-a-Sketch
+|  2/2 | Blink at different rates
+| 20/20 | **Total**
+
+*My comments are in italics. --may*
+

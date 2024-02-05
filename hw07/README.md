@@ -18,3 +18,17 @@ To run the flask server on startup, follow the following instructions:
 2. To start the service, run the command "sudo systemctl start flask"
 3. To start the service on startup, run the command "sudo systemctl enable flask"
 4. To confirm that this works, restart the beaglebone and on the host machine, connect to http://192.168.7.2:8081/
+
+# hw07 grading
+
+| Points      | Description | | |
+| ----------- | ----------- |-|-|
+|  0/2  | Project Template | | *eLinux project info missing*
+|  0/2  | | Names | 
+|  0/2  | | Executive Summary | 
+| 10/10 | Dallas 1-wire
+|  4/4  | systemd auto start |
+|  0    | Blynk - Etch-a-sketch - extra
+| 14/20 | **Total**
+
+*My comments are in italics. --may*

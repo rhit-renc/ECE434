@@ -17,3 +17,14 @@ To run the script:
 4. To stop logging, kill the running script by pressing Ctrl + C from the terminal
 
 Note: The script takes a while until it starts logging, so be patient.
+
+# hw08 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+| 10/10       | Logging to Sheets
+|  2/2        | URL for sheet
+|  8/8        | Demo
+| 20/20 | **Total**
+
+*My comments are in italics. --may*
